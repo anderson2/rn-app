@@ -1,7 +1,7 @@
 /**
  * React Native App
  *
- * Extended from sample app 
+ * Extended from sample app
  * https://github.com/facebook/react-native
  * @flow
  */
@@ -12,26 +12,34 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  Image
 } from 'react-native';
 
 
 export default class rnApp extends Component {
   render() {
+        let pic = {uri: 'https://upload.wikimedia.org/wikipedia/commons/c/ca/Vincent_Willem_van_Gogh_-_Pont_de_Langlois_-_Kr%C3%B6ller-M%C3%BCller.jpg'};
+
+
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
           React Native App
         </Text>
         <Text style={styles.instructions}>
-          To reload the screen, set a focus on the emulator window
-          then double tap the R character on your computer keyboard
+          Edited in Android Studio{'\n'}
         </Text>
         <Text style={styles.instructions}>
-          Edited in Android Studio{'\n'}
-          v 1.0.2{'\n'}
-
+          v 1.0.3 {'\n'}
         </Text>
+        
+        <Image source={pic} style={{width: 193, height: 110}}/>
+
+        <Text style={styles.instructions}>
+          Langlois Bridge
+        </Text>
+
       </View>
     );
   }
